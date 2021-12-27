@@ -1,27 +1,128 @@
+@import "colors"
+@import "nib/vendor"
+vendor-prefixes = o ms moz webkit
+
+// global
+:root
+    --card: 200px;
 body
+    box-sizing: border-box
     font-family sans-serif
     margin 0
     padding 0
-.header
-    background #010101
-    color #fff
+    color text
+.ebook
+    max-width 450px
+    width 100%
+.pxem
+    padding 0 2em
+.pyem
+    padding 2em 0
+.mx768
+    max-width: 768px
+    margin auto
     text-align: center
-    padding: 2.5em
+
+// header
+.header
+    background-origin: borderbox
+    background-position: center
+    background-repeat: no-repeat
+    background-image: url("../img/headerImg05.png")
+    object-fit: cover
+    text-align: center
+    height 100%
+    padding: 2.5em 0 4em 0
     & h1
         margin: 0 0 .5em 0
     & h2
         font-size: 1em
         margin 0 0 2em 0
     .imgLogo
+        height 100px
         width auto
-        max-height 150px
+        margin-bottom 1em
     & .btnComprar
-        background: #F06971
-        padding 1em
+        background: sushiLight
         border-radius: 20px
-        color #000
+        color #fff
+        padding 1em
         text-decoration: none
         text-transform: uppercase
+        font-weight: 700
         &:hover
-            background: #EE3A42
-            color #fff
+            background: sushi
+
+// section0
+.imgFull
+    background-origin: borderbox
+    background-position: 100%
+    background-repeat: no-repeat
+    background-image: url("../img/pexels-photo-5878433.jpeg")
+    background-size: cover
+    background-attachment: fixed
+    min-height auto
+    padding 3em 0
+    width 100%
+    color #fff
+    & .container
+        text-align: center
+        max-width: 768px
+        margin: auto
+        padding 1em
+        display: flex   
+        flex-grow: 0
+        flex-shrink: 0
+        align-items: auto
+        flex-basis auto
+
+        // grid-template-columns repeat(1, 1fr)
+        // grid-template-rows repeat(1, 1fr)
+
+
+// section1
+.sectionColor
+    background sushiLight
+    margin-bottom 2em
+    h2
+    h3
+        margin auto
+        max-width 768px
+        text-align: center
+        color #fff
+    h2
+        margin-bottom .5em
+        padding: 0 .5em
+    h3
+        font-size: 1em
+
+// section2
+.gallery
+    column-gap: 1em
+    display: grid
+    grid-template-columns: repeat(auto-fill, 100% / 4)
+    grid-template-rows: repeat(2, 1fr)
+    justify-content: center
+    & a img
+        border-radius: 1em
+        width 100%
+
+.galleyCard
+    height auto
+    margin .5em 0
+    padding 0 1em
+    a
+        text-decoration: none
+        color text
+    p
+        font-size: 1em
+    h2
+        color sushi
+
+// mediaQuery
+@media all and (max-width: 600px){
+    .gallery{
+        grid-template-columns: repeat(auto-fill, 100%)
+        padding 0 1em
+    }
+}
