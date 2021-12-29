@@ -2,127 +2,271 @@
 @import "nib/vendor"
 vendor-prefixes = o ms moz webkit
 
-// global
-:root
-    --card: 200px;
-body
-    box-sizing: border-box
-    font-family sans-serif
-    margin 0
-    padding 0
-    color text
-.ebook
-    max-width 450px
-    width 100%
-.pxem
-    padding 0 2em
-.pyem
-    padding 2em 0
-.mx768
-    max-width: 768px
-    margin auto
-    text-align: center
+// -global
+    :root
+        --card__elements 260px;
+        body
+            box-sizing border-box
+            color text
+            font-family sans-serif
+            font-size 16px
+            margin 0
+            padding 0
+        figure
+            margin 0
+            padding 0
+        .avocado_color
+            color avocado
+        .ebook
+            max-width 450px
+            width 100%
+        .mx768
+            margin auto
+            max-width 768px
+            text-align center
+        .pxem
+            padding 0 2em
+        .pxem0
+            padding 0
+        .pyem
+            padding 2em 0
+        .pyem0
+            padding 0
+        .sushi_color
+            color sushi
+        .sushiLight_color
+            color sushiLight
 
-// header
-.header
-    background-origin: borderbox
-    background-position: center
-    background-repeat: no-repeat
-    background-image: url("../img/headerImg05.png")
-    object-fit: cover
-    text-align: center
-    height 100%
-    padding: 2.5em 0 4em 0
-    & h1
-        margin: 0 0 .5em 0
-    & h2
-        font-size: 1em
-        margin 0 0 2em 0
-    .imgLogo
-        height 100px
-        width auto
-        margin-bottom 1em
-    & .btnComprar
-        background: sushiLight
-        border-radius: 20px
+// BEM
+    .btnComprar
+        background sushiLight
+        border-radius 20px
         color #fff
-        padding 1em
-        text-decoration: none
-        text-transform: uppercase
-        font-weight: 700
-        &:hover
-            background: sushi
-
-// section0
-.imgFull
-    background-origin: borderbox
-    background-position: 100%
-    background-repeat: no-repeat
-    background-image: url("../img/pexels-photo-5878433.jpeg")
-    background-size: cover
-    background-attachment: fixed
-    min-height auto
-    padding 3em 0
-    width 100%
-    color #fff
-    & .container
-        text-align: center
-        max-width: 768px
-        margin: auto
-        padding 1em
-        display: flex   
-        flex-grow: 0
-        flex-shrink: 0
-        align-items: auto
-        flex-basis auto
-
-        // grid-template-columns repeat(1, 1fr)
-        // grid-template-rows repeat(1, 1fr)
-
-
-// section1
-.sectionColor
-    background sushiLight
-    margin-bottom 2em
-    h2
-    h3
+        display inline-block
         margin auto
-        max-width 768px
-        text-align: center
+        padding 1em
+        text-decoration none
+        text-transform uppercase
+        font-weight 700
+        &hover
+                background sushi
+
+    .h2transition
+        transition all 0.3s ease
+        &:hover
+            background-color sushiLight
+// colorBand
+    .sectionColor
+        background sushiLight
+        margin-bottom 2em
+        h2
+        h3
+            color #fff
+            margin auto
+            max-width 768px
+            text-align center
+        h2
+            margin-bottom .5em
+            padding 0 .5em
+        h3
+            font-size 1em
+
+// gallery
+    .gallery
+        column-gap 1em
+        display grid
+        grid-template-columns repeat(auto-fill, 100% / 4)
+        grid-column-gap 1em
+        justify-content center
+        margin 2em auto
+        padding 0.5em auto 2em auto
+        & a img
+            border-radius 1em
+            width 100%
+
+    .gallery__galleryCard
+        border-radius 1em
+        box-shadow 0 4px 8px 0 rgba(0,0,0,0.2)
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;0px 6px 6px;
+        margin .5em 0
+        padding 1em
+        position relative
+        transition 0.3s
+        a
+            color text
+            text-decoration none
+        i
+            color sushi
+            display block
+    .galleryCard__icon
+        align-items center
+        display grid
+        grid-template-columns repeat(2, 1fr)
+        grid-column-gap 1em
+        justify-items space-between
+    .gallery__galleryCard__text
+        font-size 1em
+    .gallery__galleryCard__title
+        background-color sushi
         color #fff
-    h2
-        margin-bottom .5em
-        padding: 0 .5em
-    h3
-        font-size: 1em
+        display inline-block
+        padding 0.5em
+    .galleryTitle__h2
+        background nori
+        color #fff
+        display block
+        margin center
+        padding 0.5em
+        text-align center
+// header
+    .header
+        background-origin borderbox
+        background-position center
+        background-repeat no-repeat
+        background-image url("../img/bgSushi.webp")
+        height 100%
+        object-fit cover
+        padding 2.5em 0 3em 0
+        position relative
+        text-align center
+        & h1
+            margin 0 0 .5em 0
+        & h2
+            color sushi
+            font-size 1em
+            margin 0 0 2em 0
+        .star
+            color star
+        .imgLogo
+            height 100px
+            margin-bottom 1em
+            width auto
+        & .imgProfile
+            height auto
+            width 200px
+    .action__arrow
+        color nori
+        margin-top 2em
 
-// section2
-.gallery
-    column-gap: 1em
-    display: grid
-    grid-template-columns: repeat(auto-fill, 100% / 4)
-    grid-template-rows: repeat(2, 1fr)
-    justify-content: center
-    & a img
-        border-radius: 1em
+// maya
+    .card__box2
+    .card__box4
+        box-sizing border-box
+        display grid
+        grid-column-gap 0.5em
+        max-width var(--card__elements)
+
+    .card__box2
+        grid-template-columns repeat(2, 1fr)
+        & .maya--whiteBackground
+            max-width var(--card__elements)
+    .card__box4
+        grid-template-columns repeat(2, 1fr)
+        & .maya--whiteBackground
+            max-width var(--card__elements)
+    .maya
+        align-items flex-start
+        background-origin borderbox
+        background-position center
+        background-repeat no-repeat
+        background-image url("../img/bgSushi.webp")
+        object-fit cover
+        display flex
+        box-sizing border-box
+        flex-direction row
+        flex-wrap wrap
+        justify-content center
+        text-align center
+        & i
+            display inline
+            justify-items center
+            margin auto
+            text-align: center
+    .maya__card
+        background sushiLight
+        // border 1px solid sushiLight
+        border-radius 1em
+        margin 1em
+        padding 1em
+    .maya--noriBackground
+    .maya--whiteBackground
+        border-radius 0.5em
+        margin 1em auto
+        padding 0.5em
+        max-width var(--card__elements)
+    .maya__bottom
+        margin-bottom 2em
+        padding-bottom 2em
+    .maya__top
+        padding-top 2em
+    .maya--whiteBackground
+        background white
+        // border 1px solid sushi
+    .maya--noriBackground
+        background nori
+        color #fff
+        display block
+
+// parallax
+    .imgFull
+        background-origin borderbox
+        background-position 100%
+        background-repeat no-repeat
+        background-image url("../img/pexels-photo-5878433.webp")
+        background-size cover
+        background-attachment fixed
+        color #fff
+        min-height auto
+        padding 3em 0
         width 100%
-
-.galleyCard
-    height auto
-    margin .5em 0
-    padding 0 1em
-    a
-        text-decoration: none
-        color text
-    p
-        font-size: 1em
-    h2
-        color sushi
+        & .container
+            align-items auto
+            display flex
+            flex-direction column
+            flex-grow 0
+            flex-shrink 0
+            flex-basis auto
+            margin auto
+            max-width 768px
+            padding 1em
+            text-align center
+        & h2
+            background-color sushi
+            margin auto
+            max-width 280px
+            padding 0.5em
+            text-transform uppercase
 
 // mediaQuery
-@media all and (max-width: 600px){
-    .gallery{
-        grid-template-columns: repeat(auto-fill, 100%)
-        padding 0 1em
+    @media all and (max-width 768px){
+        .gallery{
+            grid-template-columns repeat(auto-fill, 100%)
+            padding 0 1em
+        }
+        .galleryCard__icon{
+            position absolute
+            top 1em
+            left 2em
+            .gallery__galleryCard__title{
+                font-size 1em
+                }
+        }
+        .maya__card{
+            width 280px
+            }
+        .card__box2, .card__box4{
+            max-width 100%
+            display block
+            }
+        
     }
-}
+    @media all and (min-width 596px){
+        .hideSm{
+            display none
+        }
+    }
+    @media all and (max-width 596px){
+        .hideLg{
+            display none
+        }
+    }

@@ -1,7 +1,2 @@
-<!-- Google Tag Manager (noscript) -->
-<
-noscript > < iframe src = "https://www.googletagmanager.com/ns.html?id=GTM-PPDNXHN"
-height = "0"
-width = "0"
-style = "display:none;visibility:hidden" > < /iframe></noscript >
-    <!-- End Google Tag Manager (noscript) -->
+<script src = "https://kit.fontawesome.com/57f0f78369.js"
+crossorigin = "anonymous"></script>
