@@ -1,10 +1,11 @@
 @import "colors"
 @import "nib/vendor"
+@import "gradients"
 vendor-prefixes = o ms moz webkit
 
 // -global
     :root
-        --card__elements 260px;
+        --card__elements 200px;
         body
             box-sizing border-box
             color text
@@ -119,11 +120,15 @@ vendor-prefixes = o ms moz webkit
         padding 0.5em
         text-align center
 // header
+    #header
+        transition 0.3s
+
     .header
         background-origin borderbox
         background-position center
         background-repeat no-repeat
         background-image url("../img/bgSushi.webp")
+        background-repeat repeat
         height 100%
         object-fit cover
         padding 2.5em 0 3em 0
@@ -148,62 +153,56 @@ vendor-prefixes = o ms moz webkit
         color nori
         margin-top 2em
 
-// maya
-    .card__box2
-    .card__box4
-        box-sizing border-box
-        display grid
-        grid-column-gap 0.5em
-        max-width var(--card__elements)
+// intro
+.intro
+    padding 4em 0
+    margin 2em 0
+.intro--img
+    max-width 300px
 
-    .card__box2
-        grid-template-columns repeat(2, 1fr)
-        & .maya--whiteBackground
-            max-width var(--card__elements)
-    .card__box4
-        grid-template-columns repeat(2, 1fr)
-        & .maya--whiteBackground
-            max-width var(--card__elements)
+// maya
     .maya
-        align-items flex-start
-        background-origin borderbox
-        background-position center
-        background-repeat no-repeat
-        background-image url("../img/bgSushi.webp")
-        object-fit cover
-        display flex
-        box-sizing border-box
-        flex-direction row
-        flex-wrap wrap
+        display grid
+        grid-template-columns repeat(4,2fr)
+        font-size: 0.8em
         justify-content center
+        max-width 1024px
+        margin auto
+        // padding 2em
         text-align center
         & i
             display inline
             justify-items center
             margin auto
             text-align: center
+    .maya__bg
+        background-origin borderbox
+        background-position center
+        background-image url("../img/bgSushi.webp")
+        background-repeat repeat
+        object-fit cover
     .maya__card
-        background sushiLight
-        // border 1px solid sushiLight
-        border-radius 1em
-        margin 1em
-        padding 1em
+        margin 0.5em
+        padding 0.5em
     .maya--noriBackground
     .maya--whiteBackground
-        border-radius 0.5em
         margin 1em auto
-        padding 0.5em
+        padding 0.3em
         max-width var(--card__elements)
     .maya__bottom
         margin-bottom 2em
         padding-bottom 2em
+    .maya__title
+        width 100%
+        text-align center
+        background sushi
+        color white
+        padding 1px 0
+        margin 2em 0
     .maya__top
         padding-top 2em
-    .maya--whiteBackground
-        background white
-        // border 1px solid sushi
     .maya--noriBackground
-        background nori
+        background sushi
         color #fff
         display block
 
@@ -248,17 +247,15 @@ vendor-prefixes = o ms moz webkit
             top 1em
             left 2em
             .gallery__galleryCard__title{
-                font-size 1em
+                font-size 1.2em
                 }
         }
+        .maya{
+            grid-template-columns repeat(2,2fr)
+            }
         .maya__card{
-            width 280px
-            }
-        .card__box2, .card__box4{
-            max-width 100%
-            display block
-            }
-        
+            width auto
+            }        
     }
     @media all and (min-width 596px){
         .hideSm{
