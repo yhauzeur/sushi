@@ -171,7 +171,7 @@ vendor-prefixes = o ms moz webkit
         justify-content: center
         padding-bottom 2em
     .learn__topic img
-        max-width 320px
+        width 320px
         margin 2px 5px
     .learn__topic
         position relative
@@ -229,6 +229,7 @@ vendor-prefixes = o ms moz webkit
         grid-template-rows repeat(2, 1fr)
         justify-items: center
         padding 2em
+        margin auto
     .testimons
         margin 1em
         h3, p
@@ -267,6 +268,10 @@ vendor-prefixes = o ms moz webkit
                 text-align: center
             }
         }
+        .learn__topic img {
+            width 100%
+            margin 5px 0
+            }
         .teacher__size {
             grid-template-columns  1fr
             }
@@ -279,10 +284,9 @@ vendor-prefixes = o ms moz webkit
             padding 0 auto
             width 200px
             }
-        .teacher__info{
-            margin 0
-            padding 0 auto
-            }
+        .teacher__info {
+            padding-top 0
+        }
     }
     @media all and (max-width 600px){
         .testimonials{
