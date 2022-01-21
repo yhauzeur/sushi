@@ -3,7 +3,17 @@ html(lang='es')
   head
     title Sushi en casa y online
     meta(charset='UTF-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='viewport' content='width=device-width, initial-scale=1 user-scalable=no')
+    //- meta(meta name="description" content="")
+    //- meta(meta name="keywords" content="")
+    //- meta(meta name="description" content="")
+    //- meta(property="og:image" content="")
+    //- meta(property="og:description" content="" content="")
+    //- meta(property="og:title" content="")
+    meta(name="twitter:title" content="Sushi Founder")
+    link(rel="icon" href="favicon.ico" type="image/x-icon")
+    link(rel="icon" href="img/logo.svg")
+
     link(href='css/styles.css' rel='stylesheet')
     link(src='js/scripts__head.js')
     link(src='js/api__hotmart.js')
@@ -16,6 +26,6 @@ html(lang='es')
     include header
     include parallax
     include intro
-    include gallery
     include maya
     include colorBand
+    include testimonials

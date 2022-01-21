@@ -39,34 +39,17 @@ vendor-prefixes = o ms moz webkit
             padding 2em 0
         .pyem0
             padding 0
+        .star
+            color star
         .sushi_color
             color sushi
         .sushiLight_color
             color sushiLight
         .sushiOrange_color
             color sushiOrange
+        .white
+            color white
 // BEM
-    // .master
-    //     .lateralBar
-    //         display grid
-    //         grid-template-columns 2em, 1fr
-    .btnComprar
-        background sushiLight
-        border-radius 20px
-        color #fff
-        display inline-block
-        margin auto
-        padding 1em
-        text-decoration none
-        text-transform uppercase
-        font-weight 700
-        &hover
-                background sushi
-
-    .h2transition
-        transition all 0.3s ease
-        &:hover
-            background-color sushiLight
     .btnIngresar
         background star
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -77,53 +60,38 @@ vendor-prefixes = o ms moz webkit
         margin-top 0.5em
         display inline-block
         font-weight 800
+        transition all 0.5s ease
+        &:hover
+            background starDark
+
 // colorBand
-    .sectionColor
-        background sushiLight
-        margin-bottom 2em
-        h2
-        h3
-            color #fff
-            margin auto
-            max-width 768px
-            text-align center
-        h2
-            margin-bottom .5em
-            padding 0 .5em
-        h3
-            font-size 1em
-
-// gallery
-    .gallery
-        height 50vh
-        grid-template-columns repeat(1, 2fr)
-        display flex
-        flex-direction columns
-
-    .gallery__boxes1
-    .gallery__boxes2
-        // background sushi
-        object-fit contain
-
-    .gallery__boxes1
-        width 33vw
-        padding: 1em
-    .gallery__boxes2
-        background-image url("../img/sushiBlock.jpg")
-        background-position center
-        background-repeat no-repeat
-        width  66vw
+    .small
+        font-size .5em
+        margin 0
+        color white
+    .teacher
+        --size 0.5em
+        background black
         color #fff
-        position relative
+        img
+            max-width: 250px
+    .teacher__size
+        display grid
+        grid-template-columns 2fr 1fr
+        align-items center
+    .teacher__info
+        order 1
+        padding 2em
         h2
-            position absolute
-            bottom 1em
-            left 1em
+            font-size: 2.5em
+            margin-bottom 0.5em
+    .teacher__img
+        order 2
+        padding 2em
 
 // header
     #header
         transition 0.3s
-
     .header
         background-origin borderbox
         background-position center
@@ -141,6 +109,7 @@ vendor-prefixes = o ms moz webkit
             color sushiOrange
             font-size 1em
             margin 0 0 2em 0
+            padding 0 1em
         .imgLogo
             height 100px
             margin-bottom 1em
@@ -181,56 +150,46 @@ vendor-prefixes = o ms moz webkit
 //     a
 //         color #fff
     
-
-// maya
-    .maya
-        display grid
-        grid-template-columns repeat(4,2fr)
-        font-size: 0.8em
-        justify-content center
-        max-width 1024px
-        margin auto
-        text-align center
-        & i
-            display inline
-            justify-items center
-            margin auto
-            text-align: center
-    .maya__bg
-        background-origin borderbox
-        background-position center
-        // background-image url("../img/bgSushi.webp")
-        background-repeat repeat
-        background: #000;
-        color #fff
-        object-fit cover
-    .maya__card
-        margin 0.5em
-        padding 0.5em
-        h3
-            margin 0 auto
-            color #fff
-    .maya--noriBackground
-    .maya--whiteBackground
-        margin 1em auto
-        padding 0.3em
-        max-width var(--card__elements)
-    .maya__bottom
-        margin-bottom 2em
-        padding-bottom 2em
-    .maya__title
-        width 100%
-        text-align center
-        background sushi
-        color white
-        padding 1px 0
+// learn
+    .learn
         margin 2em 0
-    .maya__top
-        padding-top 2em
-    .maya--noriBackground
-        background sushi
-        color #fff
-        display block
+        h2
+            font-size: 2em
+            margin-bottom 5px
+        h3
+            margin-top 0
+            margin-bottom 2em
+    .learn__title
+        text-align center
+        padding-top 0.5em
+        h3
+            color sushiOrange
+    .learn__topics
+        display flex
+        flex-direction row
+        flex-wrap wrap
+        justify-content: center
+        padding-bottom 2em
+    .learn__topic img
+        max-width 320px
+        margin 2px 5px
+    .learn__topic
+        position relative
+        h2, h3
+            color white
+    .topic__top
+        font-size 2.5em
+        position absolute
+        top 0.5em
+        left 1em
+    .topic__down
+        font-size 1em
+        position absolute
+        bottom 1em
+        left 2em
+        margin 0.5em auto
+        i
+            margin-bottom 0.5em
 
 // parallax
     .parallax
@@ -262,8 +221,37 @@ vendor-prefixes = o ms moz webkit
             padding 0.5em
             text-transform uppercase
             border-radius 2px
+            
+// testimonials
+    .testimonials
+        display grid
+        grid-template-columns repeat(5, 1fr)
+        grid-template-rows repeat(2, 1fr)
+        justify-items: center
+        padding 2em
+    .testimons
+        margin 1em
+        h3, p
+            margin 0.2em
+        i
+            font-size 1.2em
+        // i:after
+        //     content "5"
+    .testimons__block
+        display grid
+        grid-template-columns 3em 2fr
+        h3
+            color #9C9C9C
 
 // mediaQuery
+    @media all and (max-width 1024px){
+        .testimonials{
+            grid-template-columns repeat(3, 1fr)
+            grid-template-rows repeat(4, 1fr)
+            padding 0.5em
+            margin 2em 1em
+            }
+        }
     @media all and (max-width 768px){
         .header h1 {
             font-size 1.5em
@@ -273,25 +261,47 @@ vendor-prefixes = o ms moz webkit
         }
         .intromx {
             flex-wrap wrap
-            .mx425, .mx768 {
+            .mx425,
+            .mx768 {
                 padding 1em
                 text-align: center
             }
         }
-        .maya{
-            grid-template-columns repeat(2,2fr)
+        .teacher__size {
+            grid-template-columns  1fr
             }
-        .maya__card{
-            width auto
-            }        
+        .teacher__img {
+            order 0
+            padding 0
+            margin 2em auto 0 auto
+            }
+        .teacher__img img{
+            padding 0 auto
+            width 200px
+            }
+        .teacher__info{
+            margin 0
+            padding 0 auto
+            }
     }
-    @media all and (min-width 596px){
-        .hideSm{
-            display none
+    @media all and (max-width 600px){
+        .testimonials{
+            grid-template-columns repeat(2, 1fr)
+            grid-template-rows repeat(5, 1fr)
+            padding 0
+            }
+        .testimons {
+            margin: 0.5em
+            }
         }
-    }
-    @media all and (max-width 596px){
-        .hideLg{
-            display none
+    @media all and (max-width 425px){
+        .testimonials{
+            justify-items left
+            grid-template-columns repeat(1, 1fr)
+            grid-template-rows repeat(auto, auto)
+            padding 3em auto
+            }
+        // .testimons {
+        //     margin: 0.5em
+        //     }
         }
-    }
