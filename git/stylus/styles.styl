@@ -64,30 +64,46 @@ vendor-prefixes = o ms moz webkit
         &:hover
             background starDark
 
-// colorBand
-    .small
-        font-size .5em
-        margin 0
-        color white
-    .teacher
-        --size 0.5em
-        background black
-        color #fff
-        img
-            max-width: 250px
-    .teacher__size
-        display grid
-        grid-template-columns 2fr 1fr
-        align-items center
-    .teacher__info
-        order 1
-        padding 2em
+// course
+    .course
+        margin 2em 0
         h2
-            font-size: 2.5em
+            font-size: 2em
+            margin-bottom 5px
+        h3
+            margin-top 0
+            margin-bottom 2em
+    .course__title
+        text-align center
+        padding-top 0.5em
+        h3
+            color sushiOrange
+    .course__topics
+        display flex
+        flex-direction row
+        flex-wrap wrap
+        justify-content: center
+        padding-bottom 2em
+    .course__topic img
+        width 320px
+        margin 2px 5px
+    .course__topic
+        position relative
+        h2, h3
+            color white
+    .topic__top
+        font-size 2.5em
+        position absolute
+        top 0.5em
+        left 1em
+    .topic__down
+        font-size 1em
+        position absolute
+        bottom 1em
+        left 2em
+        margin 0.5em auto
+        i
             margin-bottom 0.5em
-    .teacher__img
-        order 2
-        padding 2em
 
 // header
     #header
@@ -149,47 +165,10 @@ vendor-prefixes = o ms moz webkit
 //     z-index 100
 //     a
 //         color #fff
-    
-// learn
-    .learn
-        margin 2em 0
-        h2
-            font-size: 2em
-            margin-bottom 5px
-        h3
-            margin-top 0
-            margin-bottom 2em
-    .learn__title
-        text-align center
-        padding-top 0.5em
-        h3
-            color sushiOrange
-    .learn__topics
-        display flex
-        flex-direction row
-        flex-wrap wrap
-        justify-content: center
-        padding-bottom 2em
-    .learn__topic img
-        width 320px
-        margin 2px 5px
-    .learn__topic
-        position relative
-        h2, h3
-            color white
-    .topic__top
-        font-size 2.5em
-        position absolute
-        top 0.5em
-        left 1em
-    .topic__down
-        font-size 1em
-        position absolute
-        bottom 1em
-        left 2em
-        margin 0.5em auto
-        i
-            margin-bottom 0.5em
+
+// objections
+.objections
+    background noBlack
 
 // parallax
     .parallax
@@ -221,7 +200,32 @@ vendor-prefixes = o ms moz webkit
             padding 0.5em
             text-transform uppercase
             border-radius 2px
-            
+
+// teacher
+    .small
+        font-size .5em
+        margin 0
+        color white
+    .teacher
+        --size 0.5em
+        background black
+        color #fff
+        img
+            max-width: 250px
+    .teacher__size
+        display grid
+        grid-template-columns 2fr 1fr
+        align-items center
+    .teacher__info
+        order 1
+        padding 2em
+        h2
+            font-size: 2.5em
+            margin-bottom 0.5em
+    .teacher__img
+        order 2
+        padding 2em
+
 // testimonials
     .testimonials
         display grid
@@ -268,7 +272,7 @@ vendor-prefixes = o ms moz webkit
                 text-align: center
             }
         }
-        .learn__topic img {
+        .course__topic img {
             width 100%
             margin 5px 0
             }
@@ -292,7 +296,7 @@ vendor-prefixes = o ms moz webkit
         .testimonials{
             grid-template-columns repeat(2, 1fr)
             grid-template-rows repeat(5, 1fr)
-            padding 0
+            padding 1em
             }
         .testimons {
             margin: 0.5em
@@ -305,7 +309,4 @@ vendor-prefixes = o ms moz webkit
             grid-template-rows repeat(auto, auto)
             padding 3em auto
             }
-        // .testimons {
-        //     margin: 0.5em
-        //     }
         }
