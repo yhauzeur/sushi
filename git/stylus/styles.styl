@@ -168,7 +168,23 @@ vendor-prefixes = o ms moz webkit
 
 // objections
 .objections
-    background noBlack
+    color white
+    background #000
+    display flex
+    flex-wrap wrap
+    flex-direction row
+    justify-content center
+    background-origin borderbox
+    background-position 100%
+    background-repeat no-repeat
+    background-image url("../img/bgImgLogos.png")
+    background-size cover
+    padding 2em
+.video
+    display block
+    margin auto 2em
+    padding 1em
+    max-width 600px
 
 // parallax
     .parallax
@@ -229,7 +245,7 @@ vendor-prefixes = o ms moz webkit
 // testimonials
     .testimonials
         display grid
-        grid-template-columns repeat(5, 1fr)
+        grid-template-columns repeat(4, 1fr)
         grid-template-rows repeat(2, 1fr)
         justify-items: center
         padding 2em
@@ -292,10 +308,17 @@ vendor-prefixes = o ms moz webkit
             padding-top 0
         }
     }
+    @media all and (max-width 700px){
+        .video{
+            width 100%
+            margin 0
+            padding 0
+            }
+        }
     @media all and (max-width 600px){
         .testimonials{
             grid-template-columns repeat(2, 1fr)
-            grid-template-rows repeat(5, 1fr)
+            grid-template-rows repeat(4, 1fr)
             padding 1em
             }
         .testimons {
