@@ -5,7 +5,9 @@ vendor-prefixes = o ms moz webkit
 
 // -global
     :root
-        --card__elements 200px;
+        --card__elements 200px
+        html
+            scroll-behavior smooth
         body
             box-sizing border-box
             color text
@@ -50,20 +52,43 @@ vendor-prefixes = o ms moz webkit
         .white
             color white
 // BEM
-    .btnIngresar
-        background star
+// Button buy
+    .btn--white
+        color white
+        text-decoration: none
+    .btnComprar
+        --btnX 1em
+        --btnY 2em
+        background btn
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        text-decoration none
-        padding 1em
-        border-radius 1em
+        border-radius 1.5em
         color #222222
-        margin-top 0.5em
         display inline-block
         font-weight 800
+        margin-top 0.5em
+        padding-top var(--btnX)
+        padding-bottom var(--btnX)
+        padding-left var(--btnY)
+        padding-right var(--btnY)
+        text-decoration none
         transition all 0.5s ease
         &:hover
-            background starDark
-
+            background btnDark
+    .buyer
+        p
+            margin 2px
+            font-size: 0.9em
+    .buy_btn
+        padding-top 0.5em
+    .buyer--color
+        color sushi
+    .buyer__price
+            font-size: 1.1em
+    .buyer--text-small
+    .buyeroldPrice
+        font-size: 0.9em
+    .buyeroldPrice
+        text-decoration: line-through
 // course
     .course
         margin 2em 0
@@ -168,6 +193,7 @@ vendor-prefixes = o ms moz webkit
 
 // objections
 .objections
+    align-items center
     color white
     background #000
     display flex
@@ -176,15 +202,24 @@ vendor-prefixes = o ms moz webkit
     justify-content center
     background-origin borderbox
     background-position 100%
-    background-repeat no-repeat
+    background-repeat repeat
     background-image url("../img/bgImgLogos.png")
     background-size cover
-    padding 2em
+    padding 3em 2em
+.objections--list
+    padding-bottom 1em
+.objections__txt
+    ul
+        li
+            padding 3px 0
+.price
+    font-size 0.8em
 .video
     display block
     margin auto 2em
     padding 1em
-    max-width 600px
+    max-width 650px
+
 
 // parallax
     .parallax
@@ -228,21 +263,76 @@ vendor-prefixes = o ms moz webkit
         color #fff
         img
             max-width: 250px
-    .teacher__size
-        display grid
-        grid-template-columns 2fr 1fr
-        align-items center
     .teacher__info
         order 1
-        padding 2em
+        padding 3em 2em
         h2
             font-size: 2.5em
             margin-bottom 0.5em
     .teacher__img
         order 2
         padding 2em
+    .teacher__size
+        display grid
+        grid-template-columns 2fr 1fr
+        align-items center
 
 // testimonials
+    .coustom
+        position relative
+    .arrow-right
+        display inline-block
+        position absolute
+        z-index 10
+        bottom 9em
+        right 1em
+        opacity 0.2
+    .arrow-left
+        display inline-block
+        position absolute
+        z-index 10
+        bottom 9em
+        left 1em
+        opacity 0.2
+    .coustomer
+        position relative
+        display grid
+        justify-items center
+        grid-template-columns repeat(6, auto)
+        grid-template-rows repeat(1, 1fr)
+        grid-column-gap 1em
+        grid-row-gap 1em
+        margin 3em
+        overflow auto
+        white-space nowrap
+        p
+            white-space: pre-line;
+            width 180px
+    .coustomer__info
+        background var(#000 50%)
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        max-width 200px
+        padding 1em
+    .califications
+        display grid
+        grid-template-columns repeat(1, 1fr)
+        justify-items center
+        margin auto
+    .plus
+        vertical-align: super
+        font-size 0.8em
+        font-weight 600
+    .rate__txt
+        color sushi
+        font-size: 0.9em
+        margin 0
+        padding 0
+    .top--rate
+        margin-top 1em
+    .rate
+        color black
+        margin-left 5px
+
     .testimonials
         display grid
         grid-template-columns repeat(4, 1fr)
@@ -256,8 +346,8 @@ vendor-prefixes = o ms moz webkit
             margin 0.2em
         i
             font-size 1.2em
-        // i:after
-        //     content "5"
+        h3
+            font-size 0.8em
     .testimons__block
         display grid
         grid-template-columns 3em 2fr

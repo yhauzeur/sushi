@@ -3,17 +3,29 @@
         video(controls preload="none" poster='./img/fbCover.png').video
             source(src='./video/curso_de_sushi_rolls.mp4' type='video/mp4')
     .objections__txt
-        h2 Este curso es para ti si
-        ul
+        h2 Este curso es para ti si:
+        ul.objections--list
             li Eres aficionado a la cocina.
             li Eres chef.
             li Quieres aprender una nueva habilidad.
             li No tienes experiencia en la preparación del Sushi.
-            li Tienes experiencia básica con la preparaci[on del Sushi.
+            li Tienes experiencia básica con la preparación del Sushi.
             li Quieres poner un negocio.
             li Quieres prepara sushi vegetariano.
             li Quieres alternativas en los mariscos y pescados.
-            li quieres aprender tus propias salsas.
-        a(href="" rel="next nofollow" target="_self").btnIngresar 
-                i.fas.fa-shopping-cart
-                |   ¡Quiero ingresar!
+            li Quieres aprender a hacer tus propias salsas.
+        .buy_btn
+            .buyer
+                a(href="" rel="next nofollow" target="_self").btn--white
+                    p Precio recomendado:	
+                        span.buyeroldPrice
+                            |   US$45.00
+                    p Precio:
+                        span.buyer__price.buyer--color
+                            |   US$25.00
+                    p Ahorras:	
+                        span.buyer--color.buter--text-small
+                            |   US$15.00 (+ 55%)
+            a(href="" rel="next nofollow" target="_self").btnComprar
+                    i.fas.fa-shopping-cart
+                    |   Quiero ingresar
