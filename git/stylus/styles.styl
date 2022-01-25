@@ -1,360 +1,32 @@
 @import "colors"
 @import "nib/vendor"
 @import "gradients"
-vendor-prefixes = o ms moz webkit
+@import "global"
+@import "bem"
+@import "header"
+@import "parallax"
+@import "intro"
+@import "objections"
+@import "course"
+@import "teacher"
+@import "coustomer"
+@import "califications"
+@import "testimonials"
 
-// -global
-    :root
-        --card__elements 200px
-        html
-            scroll-behavior smooth
-        body
-            box-sizing border-box
-            color text
-            font-family sans-serif
-            font-size 16px
-            margin 0
-            padding 0
-        figure
-            margin 0
-            padding 0
-        .avocado_color
-            color avocado
-        .ebook
-            max-width 450px
-            width 100%
-        .mx425
-            margin auto
-            max-width 425px
-        .mx768
-            margin auto
-            max-width 768px
-            padding 0 2em
-        .mx1024
-            margin auto
-            max-width 1024px
-        .pxem
-            padding 0 2em
-        .pxem0
-            padding 0
-        .pyem
-            padding 2em 0
-        .pyem0
-            padding 0
-        .star
-            color star
-        .sushi_color
-            color sushi
-        .sushiLight_color
-            color sushiLight
-        .sushiOrange_color
-            color sushiOrange
-        .white
-            color white
-// BEM
-// Button buy
-    .btn--white
-        color white
-        text-decoration: none
-    .btnComprar
-        --btnX 1em
-        --btnY 2em
-        background btn
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        border-radius 1.5em
-        color #222222
-        display inline-block
-        font-weight 800
-        margin-top 0.5em
-        padding-top var(--btnX)
-        padding-bottom var(--btnX)
-        padding-left var(--btnY)
-        padding-right var(--btnY)
-        text-decoration none
-        transition all 0.5s ease
-        &:hover
-            background btnDark
-    .buyer
-        p
-            margin 2px
-            font-size: 0.9em
-    .buy_btn
-        padding-top 0.5em
-    .buyer--color
-        color sushi
-    .buyer__price
-            font-size: 1.1em
-    .buyer--text-small
-    .buyeroldPrice
-        font-size: 0.9em
-    .buyeroldPrice
-        text-decoration: line-through
-// course
-    .course
-        margin 2em 0
-        h2
-            font-size: 2em
-            margin-bottom 5px
-        h3
-            margin-top 0
-            margin-bottom 2em
-    .course__title
-        text-align center
-        padding-top 0.5em
-        h3
-            color sushiOrange
-    .course__topics
-        display flex
-        flex-direction row
-        flex-wrap wrap
-        justify-content: center
-        padding-bottom 2em
-    .course__topic img
-        width 320px
-        margin 2px 5px
-    .course__topic
-        position relative
-        h2, h3
-            color white
-    .topic__top
-        font-size 2.5em
-        position absolute
-        top 0.5em
-        left 1em
-    .topic__down
-        font-size 1em
-        position absolute
-        bottom 1em
-        left 2em
-        margin 0.5em auto
-        i
-            margin-bottom 0.5em
-
-// header
-    #header
-        transition 0.3s
-    .header
-        background-origin borderbox
-        background-position center
-        background-repeat no-repeat
-        background-image url("../img/bgSushi.webp")
-        background-repeat repeat
-        height 100%
-        object-fit cover
-        padding 2.5em 0 3em 0
-        position relative
-        text-align center
-        & h1
-            margin 0 0 .5em 0
-        & h2
-            color sushiOrange
-            font-size 1em
-            margin 0 0 2em 0
-            padding 0 1em
-        .imgLogo
-            height 100px
-            margin-bottom 1em
-            width auto
-        & .imgProfile
-            height auto
-            width 200px
-
-// intro
-    .intro
-        background-image url("../img/bgSushi.webp")
-    .intromx
-        align-content  center
-        display flex
-        flex-direction columns
-        justify-content flex-end
-        max-width 1024px
-        margin auto
-    .mx425
-        max-width 425px
-        padding 2em
-    .intro__roll
-        max-width 250px
-
-// lateralBar
-// .lateralBar
-//     align-items center
-//     background nori
-//     color #fff
-//     display flex
-//     flex-direction column
-//     height 100vh
-//     margin 0 0 0 -2em
-//     padding 0.5em 0.5em
-//     position fixed
-//     top 0
-//     z-index 100
-//     a
-//         color #fff
-
-// objections
-.objections
-    align-items center
-    color white
-    background #000
-    display flex
-    flex-wrap wrap
-    flex-direction row
-    justify-content center
-    background-origin borderbox
-    background-position 100%
-    background-repeat repeat
-    background-image url("../img/bgImgLogos.png")
-    background-size cover
-    padding 3em 2em
-.objections--list
-    padding-bottom 1em
-.objections__txt
-    ul
-        li
-            padding 3px 0
-.price
-    font-size 0.8em
-.video
-    display block
-    margin auto 2em
-    padding 1em
-    max-width 650px
-
-
-// parallax
-    .parallax
-        background-origin borderbox
-        background-position 100%
-        background-repeat no-repeat
-        background-image url("../img/pexels-photo-5878433.webp")
-        background-size cover
-        background-attachment fixed
-        color #fff
-        min-height auto
-        padding 3em 0
-        width 100%
-        & .container
-            align-items auto
-            display flex
-            flex-direction column
-            flex-grow 0
-            flex-shrink 0
-            flex-basis auto
-            margin auto
-            max-width 1024px
-            padding 1em 2em
-            text-align center
-        & h2
-            background-color sushi
-            margin auto
-            max-width 280px
-            padding 0.5em
-            text-transform uppercase
-            border-radius 2px
-
-// teacher
-    .small
-        font-size .5em
-        margin 0
-        color white
-    .teacher
-        --size 0.5em
-        background black
-        color #fff
-        img
-            max-width: 250px
-    .teacher__info
-        order 1
-        padding 3em 2em
-        h2
-            font-size: 2.5em
-            margin-bottom 0.5em
-    .teacher__img
-        order 2
-        padding 2em
-    .teacher__size
-        display grid
-        grid-template-columns 2fr 1fr
-        align-items center
-
-// testimonials
-    .coustom
-        position relative
-    .arrow-right
-        display inline-block
-        position absolute
-        z-index 10
-        bottom 9em
-        right 1em
-        opacity 0.2
-    .arrow-left
-        display inline-block
-        position absolute
-        z-index 10
-        bottom 9em
-        left 1em
-        opacity 0.2
-    .coustomer
-        position relative
-        display grid
-        justify-items center
-        grid-template-columns repeat(6, auto)
-        grid-template-rows repeat(1, 1fr)
-        grid-column-gap 1em
-        grid-row-gap 1em
-        margin 3em
-        overflow auto
-        white-space nowrap
-        p
-            white-space: pre-line;
-            width 180px
-    .coustomer__info
-        background var(#000 50%)
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        max-width 200px
-        padding 1em
-    .califications
-        display grid
-        grid-template-columns repeat(1, 1fr)
-        justify-items center
-        margin auto
-    .plus
-        vertical-align: super
-        font-size 0.8em
-        font-weight 600
-    .rate__txt
-        color sushi
-        font-size: 0.9em
-        margin 0
-        padding 0
-    .top--rate
-        margin-top 1em
-    .rate
-        color black
-        margin-left 5px
-
-    .testimonials
-        display grid
-        grid-template-columns repeat(4, 1fr)
-        grid-template-rows repeat(2, 1fr)
-        justify-items: center
-        padding 2em
-        margin auto
-    .testimons
-        margin 1em
-        h3, p
-            margin 0.2em
-        i
-            font-size 1.2em
-        h3
-            font-size 0.8em
-    .testimons__block
-        display grid
-        grid-template-columns 3em 2fr
-        h3
-            color #9C9C9C
+vendor-prefixes = o ms moz webkit   
 
 // mediaQuery
+    @media all and (min-width 1430px){
+        .arrow-right,
+        .arrow-left{
+            display: none
+        }
+    }
+    @media all and (min-width 1405px){
+        .coustom{
+            display: none
+        }
+    }
     @media all and (max-width 1024px){
         .testimonials{
             grid-template-columns repeat(3, 1fr)
@@ -381,6 +53,12 @@ vendor-prefixes = o ms moz webkit
         .course__topic img {
             width 100%
             margin 5px 0
+            }
+        .certificate--img1,
+        .certificate--img2
+        {
+            height: auto
+            width 100%
             }
         .teacher__size {
             grid-template-columns  1fr

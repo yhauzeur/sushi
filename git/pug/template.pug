@@ -1,15 +1,9 @@
 doctype html
 html(lang='es')
   head
-    title Sushi en casa y online
+    title Sushi Founder | Imagina preparar el mejor Sushi Roll
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1 user-scalable=no')
-    //- meta(meta name="description" content="")
-    //- meta(meta name="keywords" content="")
-    //- meta(meta name="description" content="")
-    //- meta(property="og:image" content="")
-    //- meta(property="og:description" content="" content="")
-    //- meta(property="og:title" content="")
     meta(name="twitter:title" content="Sushi Founder")
     link(rel="icon" href="favicon.ico" type="image/x-icon")
     link(rel="icon" href="img/logo.svg")
@@ -17,11 +11,12 @@ html(lang='es')
     link(href='css/styles.css' rel='stylesheet')
     link(src='js/scripts__head.js')
     link(src='js/api__hotmart.js')
-    include scripts__head
-    //- include ../../deploy/js/scripts__head.js
     include boilerplate
+    include scripts__head
+    include gtm__head
   body
     script(type='text/javascript' src='js/scripts__body.js')
+    include gtm__body
     include scripts__body
     include header
     include parallax
@@ -29,4 +24,6 @@ html(lang='es')
     include objections
     include course
     include teacher
+    include coustomer
+    include califications
     include testimonials
