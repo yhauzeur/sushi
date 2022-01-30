@@ -15,9 +15,6 @@ html(lang='es')
     include scripts__head
     include gtm__head
   body
-    script(type='text/javascript' src='js/scripts__body.js')
-    include gtm__body
-    include scripts__body
     include header
     include parallax
     include intro
@@ -29,4 +26,7 @@ html(lang='es')
     include testimonials
     include warranty
     include lateralBar
+    include gtm__body
+    include scripts__body
+    script(type='text/javascript' src='js/scripts__body.js')
     script(type='text/javascript' src='js/scripts__footer.js')
