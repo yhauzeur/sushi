@@ -1,0 +1,1 @@
+.testimonials{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr);justify-items:center;padding:2em;margin:auto}.testimons{margin:1em}.testimons h3,.testimons p{margin:.2em}.testimons i{font-size:1.2em}.testimons h3{font-size:.8em}.testimons__block{display:grid;grid-template-columns:3em 2fr}.testimons__block h3{color:#9c9c9c}
