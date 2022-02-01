@@ -1,13 +1,9 @@
 browser-sync start -w --server --files "./"
 
-pug -w gitignore/pug/index.pug -o ./deploy/
-
-- pug -w ./gitignore/pug/marca/index.pug -o ./deploy/marca/
+pug -w ./git/pug/index.pug -o ./dev/
 
 - pug -w ./gitignore/pug/psicologia/index.pug -o ./deploy/psicologia/
 
-stylus -w -c -u nib ./gitignore/stylus/index.styl -o ./deploy/css/
-
-- stylus -w -c -u nib ./gitignore/stylus/marca.styl -o ./deploy/css/
+stylus -w -c -u nib ./git/stylus/styles.styl -o ./deploy/css/
 
 ngrok http 3000
